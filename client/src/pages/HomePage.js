@@ -1,9 +1,12 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer'
 import '../css/homepage.css';
 
 function HomePage() {
     return (
         <>
+        <Navbar />
         <div>
          
             <div className="wrapper">
@@ -26,4 +29,4 @@ function HomePage() {
     )
 }
 
-export default HomePage;
+export default HomePage; 
