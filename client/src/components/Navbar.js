@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Navbar, Nav} from 'react-bootstrap';
+import SignUpModal from '../modals/SignUpModal';
+import LoginModal from '../modals/LoginModal';
 import Auth from '../utils/auth';
 
 const Navbar = () => {
 
+  const [show, setShow] = useState(false);
 
+  const handleShow = (modal) => setShow(true);
 
   return (
 
@@ -24,8 +28,12 @@ const Navbar = () => {
           </> 
             ) : ( */}
           <> 
-            <Button variant="danger">Login</Button>
-            <Button variant="danger">Sign-up</Button>
+
+            <Button variant="danger" onClick={handleShow({LoginModal})}>Login</Button>
+            <Button variant="danger" onClick={handleShow({SignUpModal})}>Sign-up</Button>
+
+            <SignUpModal show={show}/>
+            <LoginModal show={show}/>
           </>      
   
         
