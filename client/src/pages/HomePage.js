@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import NavbarMain from '../components/Navbar';
 import '../css/homepage.css';
 
 function HomePage() {
     return (
         <>
-        <Navbar />
+        <NavbarMain />
         <div>
          
             <div className="wrapper">
